@@ -1,0 +1,106 @@
+:root {
+    /*COLORS*/
+    --color-primary: #dfdfdf;
+    --color-secondary: #a30000;
+    --color-hover: #720000;
+    /*FONTS*/
+}
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: black;
+}
+
+/*ESTILOS GENERICOS*/
+
+li {
+    list-style: none;
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-primary);
+    transition: 0.5s
+}
+
+a :hover {
+    color: var(--color-hover);
+    transition: 0.5s;
+
+}
+
+.bi-list {
+    color: white;
+}
+
+iframe[src*="youtube.com"] {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+}
+
+/*icono menu desplegable*/
+
+/*HEADER*/
+
+.header {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    position: fixed;
+    width: 100%;
+}
+
+.menu__list {
+    /*MENU DESPLEGABLE OCULTO*/
+    display: none;
+}
+
+.header__social ul {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+}
+
+.header__social ul li {
+    font-size: 20px;
+    margin: 1vh;
+}
+
+/*ESTILOS DEL MAIN*/
+
+.main__container {}
+
+.cont__portada img {
+    object-fit: cover;
+    max-width: 100%;
+}
+
+.cont__video iframe {
+width: 100%;
+}
+
+.cont__tour {
+min-height: 15rem;
+}
+
+.cont__tour h1 {
+color: var(--color-secondary);
+text-align: center;
+padding: 1rem;
+}
+
+.tour__line {
+    display: inline-flex;
+    padding: 1rem;
+}
+
+.tour__line li {
+    padding-right: 3rem;
+}
