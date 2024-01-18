@@ -4,6 +4,13 @@
     --color-secondary: #a30000;
     --color-hover: #720000;
     /*FONTS*/
+    --font-koulen: Koulen;
+}
+
+.koulen-regular {
+    font-family: "Koulen", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 * {
@@ -45,6 +52,25 @@ iframe[src*="youtube.com"] {
     aspect-ratio: 16/9;
 }
 
+/*CLASES GENERICAS*/
+
+.textPrimary {
+    color: var(--color-primary);
+    font-family: var(--font-koulen);
+}
+
+.textSecondary {
+    color: var(--color-secondary);
+}
+
+.fullscreen {
+    width: 100%;
+}
+
+.shadow {
+    text-shadow: 1px 1px 2px #000000;
+}
+
 /*icono menu desplegable*/
 
 /*HEADER*/
@@ -54,6 +80,7 @@ iframe[src*="youtube.com"] {
     flex-flow: row nowrap;
     justify-content: space-between;
     position: fixed;
+    z-index: 1;
     width: 100%;
 }
 
@@ -75,25 +102,23 @@ iframe[src*="youtube.com"] {
 
 /*ESTILOS DEL MAIN*/
 
-.main__container {}
-
 .cont__portada img {
     object-fit: cover;
     max-width: 100%;
 }
 
 .cont__video iframe {
-width: 100%;
+    width: 100%;
 }
 
 .cont__tour {
-min-height: 15rem;
+    min-height: 15rem;
 }
 
 .cont__tour h1 {
-color: var(--color-secondary);
-text-align: center;
-padding: 1rem;
+    color: var(--color-secondary);
+    text-align: center;
+    padding: 1rem;
 }
 
 .tour__line {
@@ -103,4 +128,71 @@ padding: 1rem;
 
 .tour__line li {
     padding-right: 3rem;
+}
+
+.cont__band {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+}
+
+.band__img {
+    width: 100%;
+}
+
+.band__about {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.band__about h1 {
+    color: var(--color-hover);
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.band__about p {
+    text-shadow: 1px 1px 2px #000000;
+}
+
+.newsletter__spotify {
+    text-align: center;
+}
+
+.footer {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 300px;
+    background-image: url(img/banner1.jpg);
+    background-size: cover;
+    background-position-y: 30%;
+}
+
+.footer img {
+    display: none;
+    height: 300px;
+}
+
+.footer__spotify {
+    position: absolute;
+    width: 100%;
+    top: 1rem;
+}
+
+.footer__inline {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer__social {
+    width: 40%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
